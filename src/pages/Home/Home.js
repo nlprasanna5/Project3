@@ -28,6 +28,7 @@ import ClearFormat from "../../components/NavbarComponents/ClearFormat/ClearForm
 import MenuBar from "../../components/menubar/MenuBar";
 
 import home from './Home.module.css';
+import Containers from "../../components/textArea/Containers";
 
 function Home() {
     const navComponents = [
@@ -69,6 +70,7 @@ function Home() {
                     ))
                     }
                 </div>
+                <Containers/>
             </div>
         </>
     )
