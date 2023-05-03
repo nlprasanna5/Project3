@@ -1,5 +1,6 @@
 import fontStyle from './FontStyle.module.css';
 import Divider from '@mui/material/Divider';
+import { Tooltip } from '@mui/material';
 
 function FontStyle() {
   const fontFamilyList = [
@@ -22,20 +23,25 @@ function FontStyle() {
   ];
   return (
     <>
+
       <div className={fontStyle.fontStyleBox}>
-        <select
-          className={fontStyle.fontStyle}
-          id="fontStyle"
-        >
-          <option>serif</option>
-          {fontFamilyList.map((x) => (
-            <option key={x}>{x}</option>
-          ))}
-        </select>
+        <Tooltip title='font'>
+          <select
+            className={fontStyle.fontStyle}
+            id="fontStyle"
+          >
+            <option>serif</option>
+            {fontFamilyList.map((x) => (
+              <option key={x}>{x}</option>
+            ))}
+          </select>
+        </Tooltip>
       </div>
       <div >
-        <Divider orientation="vertical" variant="middle" sx={{ height: "65%",gap:'0.2rem' }} />
+        <Divider orientation="vertical" variant="middle" sx={{ height: "65%", gap: '0.2rem' }} />
       </div>
+
+
     </>
   )
 }
