@@ -1,12 +1,13 @@
-import Container from "./formating/container/Container";
+import Containers from "./components/textarea/Containers";
+
 
 
 function App() {
   return (
     <>
-    <h2>Google document</h2>
+   
     
-    <Container/>
+    <Containers/>
     </>
   );
 }
