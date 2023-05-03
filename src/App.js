@@ -1,8 +1,9 @@
+import MenuBar from "./components/menubar/MenuBar";
 
 function App() {
   return (
     <>
-    <h2>Google document</h2>
+      <MenuBar/>
     </>
   );
 }
