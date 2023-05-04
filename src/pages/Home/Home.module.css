@@ -12,5 +12,21 @@
     flex-wrap: wrap;
     margin:1.3rem;
     border-radius: 1.7rem;
-    padding:0.4rem;
+    /* padding:0.4rem; */
+    align-items: center;
 }
+
+
+
+
+
+.undoContainer {
+    padding:0.2rem;
+    margin:0.2rem;
+    cursor: pointer; 
+
+}
+.undoContainer:hover {
+    background-color: rgba(0,0,0,.2);
+}
+
