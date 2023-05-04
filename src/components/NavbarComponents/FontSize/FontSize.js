@@ -14,7 +14,7 @@ function FontSize() {
                 <div className={style.container}>
                     <RemoveOutlinedIcon className={style.fontIcon} />
                 </div>
-                <Tooltip title='Font size'>
+                
                     <div className={style.fontList}>
                         <select id="fontSize" className={style.fontSelect}>
                             <option className={style.size}>3</option>
@@ -23,7 +23,7 @@ function FontSize() {
                             ))}
                         </select>
                     </div>
-                </Tooltip>
+                
                 <div>
                     <AddOutlinedIcon className={style.fontIcon} />
                 </div>

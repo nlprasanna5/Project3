@@ -25,7 +25,7 @@ function FontStyle() {
     <>
 
       <div className={fontStyle.fontStyleBox}>
-        <Tooltip title='font'>
+        
           <select
             className={fontStyle.fontStyle}
             id="fontStyle"
@@ -35,7 +35,7 @@ function FontStyle() {
               <option key={x}>{x}</option>
             ))}
           </select>
-        </Tooltip>
+       
       </div>
       <div >
         <Divider orientation="vertical" variant="middle" sx={{ height: "65%", gap: '0.2rem' }} />

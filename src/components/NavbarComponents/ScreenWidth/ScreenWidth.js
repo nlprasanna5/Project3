@@ -9,7 +9,7 @@ function ScreenWidth() {
     return (
         <>
             <div className={screen.screenContainer}>
-                <Tooltip title='Zoom'>
+                
                     <select
                         className={screen.selectContainer}
                         id="fontStyle"
@@ -19,8 +19,6 @@ function ScreenWidth() {
                             <option key={x}>{x}</option>
                         ))}
                     </select>
-                </Tooltip>
-
 
             </div>
             <div className={screen.divider}>
