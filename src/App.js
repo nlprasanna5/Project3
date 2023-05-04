@@ -1,9 +1,11 @@
-import MenuBar from "./components/menubar/MenuBar";
+
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
     <>
-      <MenuBar/>
+      
+      <Home/>
     </>
   );
 }

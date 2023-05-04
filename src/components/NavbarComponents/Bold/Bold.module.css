@@ -1,0 +1,27 @@
+.formatBold {
+    padding: 0.2rem;
+    margin: 0.2rem;
+    cursor: pointer;
+}
+.formatBold:hover {
+    background-color: rgba(0,0,0,.2);
+}
+/* .boldContainer {
+    margin:0.2rem;
+} */
+/* .boldContainer {
+    position: relative;
+}
+.boldContainer:hover:after {
+    content: "bold";
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+  } */
