@@ -24,41 +24,50 @@ import NumberList from "../../components/NavbarComponents/NumberList/NumberList"
 import DecreaseIndent from "../../components/NavbarComponents/DecreaseIndent/DecreaseIndent";
 import IncreaseIndent from "../../components/NavbarComponents/IncreaseIndent/IncreaseIndent";
 import ClearFormat from "../../components/NavbarComponents/ClearFormat/ClearFormat";
-
+import { BiBold, BiItalic } from "react-icons/bi";
 import MenuBar from "../../components/menubar/MenuBar";
 
 import home from './Home.module.css';
 import Containers from "../../components/textArea/Containers";
 
-function Home() {
+function Home(props) {
+    // const navComponents = [
+    //     <UndoFormat />,
+    //     <RedoFormat />,
+    //     <PrintNav />,
+    //     <SpellCheck />,
+    //     <PaintFormat />,
+    //     <ScreenWidth />,
+    //     <FontStyle />,
+    //     <FontSize />,
+    //     <Bold />,
+    //     <Italic />,
+    //     <Underline />,
+    //     <TextColor />,
+    //     <HighlightColor />,
+    //     <InsertLink />,
+    //     <InsertImage />,
+    //     <AlignIndent />,
+    //     <AlignCenter />,
+    //     <AlignRight />,
+    //     <AlignJustify />,
+    //     <FormatLineSpacing />,
+    //     <BulletList />,
+    //     <NumberList />,
+    //     <DecreaseIndent />,
+    //     <IncreaseIndent />,
+    //     <ClearFormat />
+    // ]
     const navComponents = [
-        <UndoFormat />,
-        <RedoFormat />,
-        <PrintNav />,
-        <SpellCheck />,
-        <PaintFormat />,
-        <ScreenWidth />,
-        <FontStyle />,
-        <FontSize />,
-        <Bold />,
-        <Italic />,
-        <Underline />,
-        <TextColor />,
-        <HighlightColor />,
-        <InsertLink />,
-        <InsertImage />,
-        <AlignIndent />,
-        <AlignCenter />,
-        <AlignRight />,
-        <AlignJustify />,
-        <FormatLineSpacing />,
-        <BulletList />,
-        <NumberList />,
-        <DecreaseIndent />,
-        <IncreaseIndent />,
-        <ClearFormat />
-    ]
-
+        {
+          icon:  <Bold />,
+          action: "strong"
+        },
+        {
+          icon:  <Italic />,
+          action: "em"
+        }
+      ];
     
     return (
         <>
@@ -66,7 +75,7 @@ function Home() {
             <div className={home.mainNav}>
                 <div className={home.navContainer}>
                     {navComponents.map((navItem, index) => (
-                        <>{navItem}</>
+                        <p onClick={() => props.onClick(navItem.action)}>{navItem.icon}</p>
                     ))
                     }
                 </div>
