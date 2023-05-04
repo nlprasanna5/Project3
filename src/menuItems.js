@@ -1,3 +1,8 @@
+import LinkOutlinedIcon from '@mui/icons-material/LinkOutlined';
+import FormatBoldOutlinedIcon from '@mui/icons-material/FormatBoldOutlined';
+import FormatAlignLeftOutlinedIcon from '@mui/icons-material/FormatAlignLeftOutlined';
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import FormatLineSpacingIcon from '@mui/icons-material/FormatLineSpacing';
 import { IoDocumentText } from "react-icons/io5"
 import { AiFillFolderOpen } from "react-icons/ai"
 import { BiHelpCircle, BiUndo, BiRedo, BiCut, BiImageAlt, BiPaint } from "react-icons/bi"
@@ -11,7 +16,8 @@ import {
     MdOutlineTableChart,
     MdOutlineEmojiEmotions,
     MdOutlinePlaylistAdd,
-    MdCellTower
+    MdCellTower,
+    MdOutlineContentPaste
 } from "react-icons/md"
 
 export const fileMenuItems = [
@@ -56,7 +62,7 @@ export const editMenuItems = [
         text: "Copy",
     },
     {
-        icon: <GrDownload />,
+        icon: <MdOutlineContentPaste />,
         text: "Paste",
     }
 ]
@@ -86,8 +92,31 @@ export const insertMenuItems = [
         text: "Drawing",
     },
     {
+        icon: < LinkOutlinedIcon/>,
+        text: "Link",
+    },
+    {
         icon: <MdOutlineEmojiEmotions />,
         text: "Emoji",
+    },
+]
+
+export const formatMenuItems=[
+    {
+        icon: <FormatBoldOutlinedIcon/>,
+        text: "Text"
+    },
+    {
+        icon: <FormatAlignLeftOutlinedIcon/>,
+        text: "Align & Indent"
+    },
+    {
+        icon: <FormatListBulletedIcon/>,
+        text: "Bullets & Numbering"
+    },
+    {
+        icon: <FormatLineSpacingIcon/>,
+        text: "Line & paragraph spacing"
     },
 ]
 

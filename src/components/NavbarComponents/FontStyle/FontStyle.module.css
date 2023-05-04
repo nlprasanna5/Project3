@@ -12,12 +12,14 @@
     width:100%;
     padding: 0.2rem;
     margin:0.2rem;
-   
+    border:none;
+    border-radius: 2px;
+    background-color: transparent;
    
 }
 
-/* .fontStyle:hover {
-    /* background-color: rgba(0,0,0,.2); */
-
+.fontStyle:hover {
+     background-color: rgba(0,0,0,.2);
+}
 
 

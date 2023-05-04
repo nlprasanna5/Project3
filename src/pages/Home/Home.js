@@ -58,15 +58,15 @@ function Home() {
         <IncreaseIndent />,
         <ClearFormat />
     ]
+
+    
     return (
         <>
             <MenuBar />
             <div className={home.mainNav}>
                 <div className={home.navContainer}>
                     {navComponents.map((navItem, index) => (
-                        <>
-                            {navItem}
-                        </>
+                        <>{navItem}</>
                     ))
                     }
                 </div>
