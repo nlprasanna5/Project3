@@ -1,8 +1,10 @@
 import fontStyle from './FontStyle.module.css';
 import Divider from '@mui/material/Divider';
 import { Tooltip } from '@mui/material';
+import { useState } from 'react';
 
 function FontStyle() {
+  let [fontName,setFontName]=useState("Font Style")
   const fontFamilyList = [
     "serif",
     "sans-serif",
@@ -21,6 +23,12 @@ function FontStyle() {
     "Times New Roman",
     "Impact",
   ];
+
+  const handleFontStyle=(e)=>{
+    setFontName(e.target.value);
+    document.execCommand("fontName",false,e.target.value);
+    console.log(e.target.value);
+  }
   return (
     <>
 
@@ -29,6 +37,7 @@ function FontStyle() {
           <select
             className={fontStyle.fontStyle}
             id="fontStyle"
+            onChange={handleFontStyle}
           >
             <option>serif</option>
             {fontFamilyList.map((x) => (
