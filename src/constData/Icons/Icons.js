@@ -31,107 +31,109 @@ export const Icons = [
     {
         icon: <UndoIcon />,
         text: 'undo',
+        action: "undo",
     },
     {
         icon: <RedoIcon />,
         text: 'redo',
+        action: "redo",
     },
-    {
-        icon: <PrintOutlinedIcon />,
-        text: 'print'
-
-    },
-    {
-        icon: <SpellcheckOutlinedIcon />,
-        text: 'spell check'
-    },
-    {
-        icon: <ImagesearchRollerOutlinedIcon />,
-        text: 'paint'
-    },
-    {
-        icon: <ScreenWidth />,
-        text: 'zoom'
-    },
-    {
-        icon: <FontStyle />,
-        text: 'font style'
-    },
-    {
-        icon: <FontSize />,
-        text: 'font size'
-    },
-
     {
         icon: <FormatBoldOutlinedIcon />,
         text: 'bold',
+        action: "bold",
     },
     {
         icon: <FormatItalicOutlinedIcon />,
         text: 'italic',
+        action: "italic",
     },
     {
         icon: <FormatUnderlinedOutlinedIcon />,
         text: 'underline',
-    },
-
-    {
-        icon: <FormatColorTextOutlinedIcon />,
-        text: 'text color'
-    },
-    {
-        icon: <BrushOutlinedIcon />,
-        text: 'highlight color'
-    },
-    {
-        icon: <LinkOutlinedIcon />,
-        text: 'insert link'
-    },
-    {
-        icon: <InsertPhotoOutlinedIcon />,
-        text: 'insert image'
+        action: "underline",
     },
     {
         icon: <FormatAlignLeftOutlinedIcon />,
-        text: 'align left'
+        text: 'align left',
+        action: "justifyLeft",
     },
     {
         icon: <FormatAlignCenterOutlinedIcon />,
-        text: 'align center'
+        text: 'align center',
+        action: "justifyCenter",
     },
     {
         icon: <FormatAlignRightOutlinedIcon />,
-        text: 'align right'
+        text: 'align right',
+        action: "justifyRight",
     },
     {
         icon: <FormatAlignJustifyOutlinedIcon />,
-        text: 'justify'
+        text: 'justify',
+        action: "justifyFull",
     },
-    {
-        icon: <FormatLineSpacingIcon />,
-        text: 'line space'
-    },
+    
     {
         icon: <FormatListBulletedIcon />,
-        text: 'bulleted list'
+        text: 'bulleted list',
+        action: "insertUnorderedList",
     },
     {
         icon: <FormatListNumberedIcon />,
-        text: 'numbered list'
+        text: 'numbered list',
+       
+        action: "insertOrderedList",
     },
     {
         icon: <FormatIndentDecreaseIcon />,
-        text: 'decrease indent'
+        text: 'decrease indent',
+        action: "outdent",
     },
     {
         icon: <FormatIndentIncreaseIcon />,
-        text: 'increase indent'
+        text: 'increase indent',
+        action: "indent",
     },
     
     {
         icon: <FormatClearIcon />,
-        text: 'clear format'
+        text: 'clear format',
+        action: "removeFormat",
     },
 
 
 ]
+
+export const scaleList = [
+   "100%", "150%" , "200%" ,"75%", "50%" , "25%"
+  ]
+
+  
+export const headingList = [
+    {
+      icon : "Heading 1",
+      value : "H1",
+    } ,
+    {
+      icon : "Heading 2",
+      value : "H2",
+    } ,
+    {
+      icon : "Heading 3",
+      value : "H3",
+    } ,
+    {
+      icon : "Heading 4",
+      value : "H4",
+    } ,
+    {
+      icon : "Heading 5",
+      value : "H5",
+    } ,
+    {
+      icon : "Heading 6",
+      value : "H6",
+    } 
+    
+  ];
