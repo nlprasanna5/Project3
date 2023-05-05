@@ -32,10 +32,9 @@
 .undoContainer:hover {
     background-color: rgba(0,0,0,.2);
 }
-.undoContainer :active{
+.undoContainer:active{
     background-color: skyblue;
 }
-
 :local .active{
     background-color: skyblue;
 }
