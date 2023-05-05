@@ -1,8 +1,10 @@
+
+
 .box{
     border: 1px solid rgb(182, 182, 182);
     /* box-shadow: 0px 0px 3px 3px rgb(182, 182, 182,0.5); */
-    width: 595px;
-    height: 745px;
+    width: 38rem;
+    height: 46rem;
     position: relative;
     left: 30%;
    
@@ -15,3 +17,5 @@
     outline: none;
    
 }
+
+

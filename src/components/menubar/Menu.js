@@ -3,7 +3,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import style from "./menuBar.module.css"
 
-export default function BasicMenu({ menuItems, label }) {
+export default function BasicMenu({ menuItems, label, className }) {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
 
@@ -15,7 +15,7 @@ export default function BasicMenu({ menuItems, label }) {
     };
 
     return (
-        <div>
+        <div className={className}>
             <p className={style.menuBarContentBottomP}
                 id="basic-button"
                 aria-controls={open ? 'basic-menu' : undefined}

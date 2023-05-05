@@ -1,15 +1,26 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import style from "./menuBar.module.css"
 import { Tooltip } from '@mui/material'
-import { IoDocumentText } from "react-icons/io5"
-import { AiOutlineStar, AiFillStar } from "react-icons/ai"
-import { MdDriveFileMoveOutline, MdOutlineInsertComment } from "react-icons/md"
-import { SiGooglemeet } from "react-icons/si"
-import { TbLock } from "react-icons/tb"
-import { CgProfile } from "react-icons/cg"
-import { BsCloudCheck } from "react-icons/bs"
+import DescriptionIcon from '@mui/icons-material/Description';
+import StarIcon from '@mui/icons-material/Star';
+import StarOutlineIcon from '@mui/icons-material/StarOutline';
+import DriveFileMoveOutlinedIcon from '@mui/icons-material/DriveFileMoveOutlined';
+import CloudDoneOutlinedIcon from '@mui/icons-material/CloudDoneOutlined';
+import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
+import VideocamOutlinedIcon from '@mui/icons-material/VideocamOutlined';
 import BasicMenu from './Menu'
-import { fileMenuItems, helpMenuItems, editMenuItems, viewMenuItems, insertMenuItems, extensionMenuItems } from '../../menuItems'
+import {
+    fileMenuItems,
+    helpMenuItems,
+    editMenuItems,
+    viewMenuItems,
+    insertMenuItems,
+    formatMenuItems,
+    extensionMenuItems
+} from '../../menuItems'
 
 const MenuBar = () => {
     const [docName, setDocName] = useState("Untitled Document")
@@ -18,46 +29,52 @@ const MenuBar = () => {
     return (
         <div className={style.menuBarContainer}>
             <div className={style.menuBar}>
-                <h1><IoDocumentText color='#4285F4' size={40} /></h1>
+                <Tooltip title="Docs home">
+                    <h1><DescriptionIcon sx={{ color: '#4285F4', fontSize: "3rem" }} /></h1>
+                </Tooltip>
+
                 <div className={style.menuBarContent}>
                     <div className={style.menuBarContentTop}>
                         <input type="text"
                             value={docName}
                             onChange={(e) => setDocName(e.target.value)} />
                         <Tooltip title="Star">
-                            <p onClick={()=> setStarred(!starred)}> 
-                                {starred? <AiFillStar size={20} color='#4285F4'/> :  <AiOutlineStar size={20} />}
+                            <p onClick={() => setStarred(!starred)}>
+                                {starred ? <StarIcon sx={{ fontSize: "1.5rem", color: '#4285F4' }} /> : <StarOutlineIcon sx={{ fontSize: "1.5rem" }} />}
                             </p>
                         </Tooltip>
                         <Tooltip title="Move">
-                            <p><MdDriveFileMoveOutline size={20} /></p>
+                            <p><DriveFileMoveOutlinedIcon sx={{ fontSize: "1.5rem" }} /></p>
                         </Tooltip>
                         <Tooltip title="See document status">
-                            <p><BsCloudCheck size={20} /></p>
+                            <p><CloudDoneOutlinedIcon sx={{ fontSize: "1.5rem" }} /></p>
                         </Tooltip>
                     </div>
 
                     <div className={style.menuBarContentBottom}>
-                        <BasicMenu menuItems={fileMenuItems} label="File" />
-                        <BasicMenu menuItems={editMenuItems} label="Edit" />
-                        <BasicMenu menuItems={viewMenuItems} label="View" />
-                        <BasicMenu menuItems={insertMenuItems} label="Insert" />
-                        <BasicMenu menuItems={editMenuItems} label="Format" />
-                        <BasicMenu menuItems={extensionMenuItems} label="Extensions" />
-                        <BasicMenu menuItems={helpMenuItems} label="Help" />
+                        <BasicMenu menuItems={fileMenuItems} label="File" className={style.file} />
+                        <BasicMenu menuItems={editMenuItems} label="Edit" className={style.edit} />
+                        <BasicMenu menuItems={viewMenuItems} label="View" className={style.view} />
+                        <BasicMenu menuItems={insertMenuItems} label="Insert" className={style.insert} />
+                        <BasicMenu menuItems={formatMenuItems} label="Format" className={style.format} />
+                        <BasicMenu menuItems={extensionMenuItems} label="Extensions" className={style.extension} />
+                        <BasicMenu menuItems={helpMenuItems} label="Help" className={style.help} />
                     </div>
                 </div>
             </div>
             <div className={style.menuBarSideOptions}>
                 <Tooltip title="Open Comment History" >
-                    <p><MdOutlineInsertComment size={25} /></p>
+                    <p><CommentOutlinedIcon sx={{ fontSize: "1.8rem" }} /></p>
                 </Tooltip>
                 <Tooltip title="Join a call here or present this tab to the call">
-                <p><SiGooglemeet size={25} /></p>
+                    <p><VideocamOutlinedIcon sx={{ fontSize: "2.2rem" }} /></p>
                 </Tooltip>
-               
-                <button> <TbLock size={20} />Share</button>
-                <p><CgProfile size={35} /></p>
+
+                <button>
+                    <span className={style.shareBtn}> <LockOutlinedIcon sx={{ fontSize: "1.5rem" }} />Share</span>
+                    <span className={style.shareIcon}><PersonAddAltOutlinedIcon /></span>
+                </button>
+                <p><AccountCircleOutlinedIcon sx={{ fontSize: "2.5rem" }} /></p>
             </div>
         </div>
     )
