@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+    margin: 0rem;
+    padding: 0rem;
 }
 
 .menuBarContainer {
@@ -46,8 +46,8 @@
 
 .menuBarContentTop p {
     margin-top: 4px;
-    height: 25px;
-    width: 25px;
+    height: 1.5rem;
+    width: 1.5rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -60,6 +60,7 @@
 }
 
 .menuBarContentBottom {
+    margin-top: 0.3rem;
     display: flex;
     align-items: center;
     gap: 0.2rem;
@@ -92,8 +93,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 40px;
-    width: 40px;
+    height: 2.5rem;
+    width: 2.5rem;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -118,4 +119,70 @@
 
 .menuBarSideOptions button:hover {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.shareBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.shareIcon {
+    display: none
+}
+
+@media screen and (max-width: 768px) {
+
+    .help {
+        display: none;
+    }
+
+    .extension {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 610px) {
+    .format {
+        display: none;
+    }
+
+    .menuBarSideOptions {
+        margin-left: 2rem;
+    }
+
+    .menuBarSideOptions button {
+        width: 4.5rem;
+    }
+
+    .shareBtn {
+        display: none
+    }
+
+    .shareIcon {
+        display: block
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .insert {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    .file {
+        display: none;
+    }
+
+    .edit {
+        display: none;
+    }
+
+    .view {
+        display: none;
+    }
 }

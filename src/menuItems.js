@@ -1,38 +1,48 @@
-import { IoDocumentText } from "react-icons/io5"
-import { AiFillFolderOpen } from "react-icons/ai"
-import { BiHelpCircle, BiUndo, BiRedo, BiCut, BiImageAlt, BiPaint } from "react-icons/bi"
-import { GrDownload } from "react-icons/gr"
-import { SlGraduation } from "react-icons/sl"
-import {
-    MdDriveFileMoveOutline,
-    MdDriveFileRenameOutline,
-    MdContentCopy,
-    MdFullscreen,
-    MdOutlineTableChart,
-    MdOutlineEmojiEmotions,
-    MdOutlinePlaylistAdd,
-    MdCellTower
-} from "react-icons/md"
+import DriveFileMoveOutlinedIcon from '@mui/icons-material/DriveFileMoveOutlined';
+import DescriptionIcon from '@mui/icons-material/Description';
+import FolderOpenOutlinedIcon from '@mui/icons-material/FolderOpenOutlined';
+import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
+import FormatBoldOutlinedIcon from '@mui/icons-material/FormatBoldOutlined';
+import FormatAlignLeftOutlinedIcon from '@mui/icons-material/FormatAlignLeftOutlined';
+import FormatLineSpacingIcon from '@mui/icons-material/FormatLineSpacing';
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import DriveFileRenameOutlineOutlinedIcon from '@mui/icons-material/DriveFileRenameOutlineOutlined';
+import UndoIcon from '@mui/icons-material/Undo';
+import RedoIcon from '@mui/icons-material/Redo';
+import ContentCutOutlinedIcon from '@mui/icons-material/ContentCutOutlined';
+import FileCopyOutlinedIcon from '@mui/icons-material/FileCopyOutlined';
+import ContentPasteOutlinedIcon from '@mui/icons-material/ContentPasteOutlined';
+import FullscreenOutlinedIcon from '@mui/icons-material/FullscreenOutlined';
+import ImageOutlinedIcon from '@mui/icons-material/ImageOutlined';
+import TableChartOutlinedIcon from '@mui/icons-material/TableChartOutlined';
+import BrushOutlinedIcon from '@mui/icons-material/BrushOutlined';
+import EmojiEmotionsOutlinedIcon from '@mui/icons-material/EmojiEmotionsOutlined';
+import PlaylistAddOutlinedIcon from '@mui/icons-material/PlaylistAddOutlined';
+import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
+import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
+import SensorsOutlinedIcon from '@mui/icons-material/SensorsOutlined';
+import LinkOutlinedIcon from '@mui/icons-material/LinkOutlined';
+
 
 export const fileMenuItems = [
     {
-        icon: <IoDocumentText />,
+        icon: <DescriptionIcon />,
         text: "New"
     },
     {
-        icon: <AiFillFolderOpen />,
+        icon: <FolderOpenOutlinedIcon />,
         text: "Open"
     },
     {
-        icon: <GrDownload />,
+        icon: <FileDownloadOutlinedIcon />,
         text: "Download"
     },
     {
-        icon: <MdDriveFileMoveOutline />,
+        icon: <DriveFileMoveOutlinedIcon />,
         text: "Move"
     },
     {
-        icon: <MdDriveFileRenameOutline />,
+        icon: <DriveFileRenameOutlineOutlinedIcon />,
         text: "Rename"
     },
 
@@ -40,79 +50,101 @@ export const fileMenuItems = [
 
 export const editMenuItems = [
     {
-        icon: <BiUndo />,
+        icon: <UndoIcon />,
         text: "Undo",
     },
     {
-        icon: <BiRedo />,
+        icon: <RedoIcon />,
         text: "Redo",
     },
     {
-        icon: <BiCut />,
+        icon: <ContentCutOutlinedIcon />,
         text: "Cut",
     },
     {
-        icon: <MdContentCopy />,
+        icon: <FileCopyOutlinedIcon />,
         text: "Copy",
     },
     {
-        icon: <GrDownload />,
+        icon: <ContentPasteOutlinedIcon />,
         text: "Paste",
     }
 ]
 
 export const viewMenuItems = [
     {
-        icon: <MdDriveFileRenameOutline />,
+        icon: <DriveFileRenameOutlineOutlinedIcon />,
         text: "Mode",
     },
     {
-        icon: <MdFullscreen />,
+        icon: <FullscreenOutlinedIcon />,
         text: "Full Screen",
     },
 ]
 
 export const insertMenuItems = [
     {
-        icon: <BiImageAlt />,
+        icon: <ImageOutlinedIcon />,
         text: "Image",
     },
     {
-        icon: <MdOutlineTableChart />,
+        icon: <TableChartOutlinedIcon />,
         text: "Table",
     },
     {
-        icon: <BiPaint />,
+        icon: <BrushOutlinedIcon />,
         text: "Drawing",
     },
     {
-        icon: <MdOutlineEmojiEmotions />,
+        icon: <LinkOutlinedIcon />,
+        text: "Link",
+    },
+    {
+        icon: <EmojiEmotionsOutlinedIcon />,
         text: "Emoji",
     },
 ]
 
+export const formatMenuItems = [
+    {
+        icon: <FormatBoldOutlinedIcon />,
+        text: "Text",
+    },
+    {
+        icon: <FormatAlignLeftOutlinedIcon />,
+        text: "Align & Indent",
+    },
+    {
+        icon: <FormatLineSpacingIcon />,
+        text: "Line & paragrphn spacing",
+    },
+    {
+        icon: <FormatListBulletedIcon />,
+        text: "Bullets & numbering",
+    },
+]
 export const extensionMenuItems = [
     {
-        icon: <MdOutlinePlaylistAdd />,
+        icon: <PlaylistAddOutlinedIcon />,
         text: "Add-ons"
     },
     {
-        icon: <MdOutlinePlaylistAdd />,
+        icon: <PlaylistAddOutlinedIcon />,
         text: "Apps Script"
     }
 ]
 
 export const helpMenuItems = [
     {
-        icon: <BiHelpCircle />,
+        icon: <HelpOutlineOutlinedIcon />,
         text: "Help"
     },
     {
-        icon: <SlGraduation />,
+        icon: <SchoolOutlinedIcon />,
         text: "Training"
     },
     {
-        icon: <MdCellTower />,
+        icon: <SensorsOutlinedIcon />,
         text: "Updates"
     }
 
