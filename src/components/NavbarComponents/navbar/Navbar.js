@@ -2,10 +2,8 @@ import React from "react";
 import home from "../../../pages/Home/Home.module.css";
 import { Icons } from "../../../constData/Icons/Icons";
 import { Tooltip } from "@mui/material";
-
 import FontStyle from "../FontStyle/FontStyle";
 import FontSize from "../FontSize/FontSize";
-
 import FontColor from "../FontColor/FontColor";
 import HeightColor from "../heighlightColor/HeightColor";
 import HandleScale from "../handleScale/HandleScale";
@@ -13,10 +11,19 @@ import SelectImage from "../selectImage/SelectImage";
 import Links from "../link/Links";
 import Printer from "../printer/Printer";
 import Heading from "../heading/Heading";
+import { useState } from "react";
 
 function Navbar({ printDiv }) {
-  function handleIcons(icon) {
-    document.execCommand(`${icon.action}`);
+  const [click, setClick]=useState(false)
+  const [activeIcon, setActiveIcon]= useState(null)
+  function handleIcons(icon, index) {
+    if(index>1){
+      setClick(!click)
+      setActiveIcon(index)
+    }
+    
+    document.execCommand(`${icon.action}`, false, null);
+
   }
 
   return (
@@ -34,7 +41,7 @@ function Navbar({ printDiv }) {
               <Tooltip title={icon.text} key={index}>
                 <div
                   onClick={() => handleIcons(icon)}
-                  className={home.undoContainer}
+                  className={`${home.undoContainer} ${click? (activeIcon===index ? home.active : null): null}`}
                   title="undo"
                 >
                   {icon.icon}

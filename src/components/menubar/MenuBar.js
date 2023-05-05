@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import style from "./menuBar.module.css"
 import { Tooltip } from '@mui/material'
 import DescriptionIcon from '@mui/icons-material/Description';
@@ -25,6 +25,12 @@ import {
 const MenuBar = () => {
     const [docName, setDocName] = useState("Untitled Document")
     const [starred, setStarred] = useState(false)
+    const docNameRef = useRef(null)
+
+
+    function handleFocus(){
+        docNameRef.current.focus()
+    }
 
     return (
         <div className={style.menuBarContainer}>
@@ -35,9 +41,12 @@ const MenuBar = () => {
 
                 <div className={style.menuBarContent}>
                     <div className={style.menuBarContentTop}>
+                        
                         <input type="text"
                             value={docName}
+                            ref={docNameRef}
                             onChange={(e) => setDocName(e.target.value)} />
+
                         <Tooltip title="Star">
                             <p onClick={() => setStarred(!starred)}>
                                 {starred ? <StarIcon sx={{ fontSize: "1.5rem", color: '#4285F4' }} /> : <StarOutlineIcon sx={{ fontSize: "1.5rem" }} />}
@@ -52,7 +61,9 @@ const MenuBar = () => {
                     </div>
 
                     <div className={style.menuBarContentBottom}>
-                        <BasicMenu menuItems={fileMenuItems} label="File" className={style.file} />
+
+
+                        <BasicMenu menuItems={fileMenuItems} label="File" className={style.file} onClick={handleFocus}/>
                         <BasicMenu menuItems={editMenuItems} label="Edit" className={style.edit} />
                         <BasicMenu menuItems={viewMenuItems} label="View" className={style.view} />
                         <BasicMenu menuItems={insertMenuItems} label="Insert" className={style.insert} />

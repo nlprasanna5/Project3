@@ -1,7 +1,7 @@
 
 
 .mainNav {
-    width:99vw;
+    width:100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,12 +27,18 @@
     padding:0.2rem;
     margin:0.2rem;
     cursor: pointer; 
-
+    border-radius: 2px;
 }
 .undoContainer:hover {
     background-color: rgba(0,0,0,.2);
 }
+.undoContainer :active{
+    background-color: skyblue;
+}
 
+:local .active{
+    background-color: skyblue;
+}
 @media only screen and (max-width:320px) and (max-width:375px)  and (max-width:425px) {
     .mainNav{
         width:99vw;
