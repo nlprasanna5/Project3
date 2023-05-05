@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { AiOutlineHighlight } from "react-icons/ai";
+import { Tooltip } from '@mui/material';
+import style from '../FontStyle/FontStyle.module.css';
 
 function HeightColor() {
     const [higlightColor, setHeighlightColor] = useState("#000000");
@@ -9,8 +11,9 @@ function HeightColor() {
     document.execCommand("backColor", false, e.target.value);
   };
   return (
-    <div>
-       <button>
+    <div className={style.fontStyleBox}>
+      <Tooltip title='Highlight color'>
+      <button  style={{border:'transparent'}} className={style.fontStyle}>
             <label htmlFor="highlighColor">
               <AiOutlineHighlight
                 style={{ zIndex: "1", color: higlightColor }}
@@ -24,6 +27,8 @@ function HeightColor() {
               onChange={handleHighlightColor}
             />
           </button>
+      </Tooltip>
+       
     </div>
   )
 }

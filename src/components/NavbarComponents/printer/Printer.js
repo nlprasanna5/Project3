@@ -1,5 +1,7 @@
 import React from 'react'
 import { BiPrinter } from "react-icons/bi";
+import { Tooltip } from '@mui/material';
+import style from '../../../pages/Home/Home.module.css'
 
 function Printer({printDiv}) {
     const handlePrint = () => {
@@ -12,10 +14,13 @@ function Printer({printDiv}) {
       };
     
   return (
-    <div>
-        <button onClick={handlePrint}>
-            <BiPrinter />
+    <div >
+      <Tooltip title='Print'>
+      <button onClick={handlePrint} style={{border:'transparent'}} className={style.undoContainer}  >
+            <BiPrinter style={{fontSize:'1.2rem'}} />
           </button>
+      </Tooltip>
+        
     </div>
   )
 }

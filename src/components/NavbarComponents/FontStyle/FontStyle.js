@@ -4,7 +4,7 @@ import { Tooltip } from '@mui/material';
 import { useState } from 'react';
 
 function FontStyle() {
-  let [fontName,setFontName]=useState("Font Style")
+  let [fontName, setFontName] = useState("serif")
   const fontFamilyList = [
     "serif",
     "sans-serif",
@@ -24,27 +24,29 @@ function FontStyle() {
     "Impact",
   ];
 
-  const handleFontStyle=(e)=>{
+  const handleFontStyle = (e) => {
     setFontName(e.target.value);
-    document.execCommand("fontName",false,e.target.value);
+    document.execCommand("fontName", false, e.target.value);
     console.log(e.target.value);
   }
   return (
     <>
 
       <div className={fontStyle.fontStyleBox}>
-        
+        <Tooltip title='Font style'>
           <select
             className={fontStyle.fontStyle}
             id="fontStyle"
             onChange={handleFontStyle}
           >
-            <option>serif</option>
+            <option>{fontName}</option>
             {fontFamilyList.map((x) => (
               <option key={x}>{x}</option>
             ))}
           </select>
-       
+
+        </Tooltip>
+
       </div>
       <div >
         <Divider orientation="vertical" variant="middle" sx={{ height: "65%", gap: '0.2rem' }} />

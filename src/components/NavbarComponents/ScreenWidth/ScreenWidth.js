@@ -1,6 +1,6 @@
 import screen from './ScreenWidth.module.css';
 import Divider from '@mui/material/Divider';
-import { Tooltip } from '@mui/material';
+
 
 function ScreenWidth() {
     const scaleList = [
