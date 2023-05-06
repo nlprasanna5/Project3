@@ -17,8 +17,10 @@ function SelectImage() {
 
       let imgUrl = URL.createObjectURL(e.target.files[0]);
       let img = document.createElement("img");
-      img.style.maxWidth = "90%"; 
-      img.style.maxHeight = "90%"; 
+
+      img.style.maxWidth = "70%"; 
+      img.style.maxHeight = "70%"; 
+
       img.src = imgUrl;
       document.execCommand("insertHTML", false, img.outerHTML);
     }
