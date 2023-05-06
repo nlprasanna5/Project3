@@ -10,7 +10,7 @@ function Printer({printDiv}) {
         document.body.innerHTML = contents;
         window.print();
         document.body.innerHTML = originalContents;
-        console.log(originalContents);
+        
       };
     
   return (
