@@ -35,14 +35,14 @@ function Home() {
 
             <div className={style.contentContainer}>
             <div ref={printDiv} className={style.box} contentEditable="true" >
-
+                  
             </div>
             </div>
 
            
         </>
     )
-}
 
+}
 
 export default Home;
