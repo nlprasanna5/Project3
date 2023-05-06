@@ -45,7 +45,7 @@ function Navbar({ printDiv }) {
 
           <FontColor />
           <HeightColor />
-          <Links />
+         
           <SelectImage />
 
           {Icons.slice(6).map((icon, index) => {

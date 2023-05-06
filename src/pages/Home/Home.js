@@ -1,8 +1,4 @@
-
 import MenuBar from "../../components/menubar/MenuBar";
-
-
-
 import Navbar from "../../components/NavbarComponents/navbar/Navbar";
 import { useRef } from "react";
 // import style from "../../components/textArea/Container.module.css"
@@ -17,12 +13,12 @@ function Home() {
 
             <div className={style.contentContainer}>
             <div ref={printDiv} className={style.box} contentEditable="true" >
-
+                  
             </div>
             </div>
         </>
     )
-}
 
+}
 
 export default Home;

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef } from "react";
 import { RxImage } from "react-icons/rx";
 import { Tooltip } from '@mui/material';
 import style from '../../../pages/Home/Home.module.css'
@@ -10,16 +10,21 @@ function SelectImage() {
     inputRef.current.click();
   }
 
+
   function image(e) {
     console.log(e.target.files[0]);
     if (e.target.files[0]) {
-      document.execCommand(
-        "insertImage",
-        "",
-        URL.createObjectURL(e.target.files[0])
-      );
+
+      let imgUrl = URL.createObjectURL(e.target.files[0]);
+      let img = document.createElement("img");
+      img.style.maxWidth = "70%"; 
+      img.style.maxHeight = "70%"; 
+      img.src = imgUrl;
+      document.execCommand("insertHTML", false, img.outerHTML);
     }
   }
+ 
+     
   return (
     <div>
       <button style={{border:'transparent'}} className={style.undoContainer}>
@@ -29,10 +34,11 @@ function SelectImage() {
           </label>
         </Tooltip>
 
+
       </button>
       <input ref={inputRef} hidden onChange={image} type="file" />
     </div>
-  )
+  );
 }
 
-export default SelectImage
+export default SelectImage;
