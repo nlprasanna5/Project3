@@ -1,8 +1,4 @@
-
 import MenuBar from "../../components/menubar/MenuBar";
-
-
-
 import Navbar from "../../components/NavbarComponents/navbar/Navbar";
 import { useRef } from "react";
 // import style from "../../components/textArea/Container.module.css"
@@ -22,7 +18,7 @@ function Home() {
             </div>
         </>
     )
-}
 
+}
 
 export default Home;
