@@ -27,6 +27,7 @@ function Printer({ printDiv }) {
     // document.body.removeChild(iframe);
   };
 
+
   return (
     <div>
       {/* <Tooltip title='Print'> */}
@@ -38,6 +39,7 @@ function Printer({ printDiv }) {
         <BiPrinter style={{ fontSize: "1.2rem" }} />
       </button>
       {/* </Tooltip> */}
+
     </div>
   );
 }
