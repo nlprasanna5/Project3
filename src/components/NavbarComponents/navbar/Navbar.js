@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import home from "../../../pages/Home/Home.module.css";
 import { Icons } from "../../../constData/Icons/Icons";
 import { Tooltip } from "@mui/material";
@@ -13,6 +13,7 @@ import SelectImage from "../selectImage/SelectImage";
 import Links from "../link/Links";
 import Printer from "../printer/Printer";
 import Heading from "../heading/Heading";
+
 function Navbar({ printDiv }) {
   function handleIcons(icon) {
     document.execCommand(`${icon.action}`);

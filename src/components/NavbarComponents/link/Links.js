@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { BsLink } from "react-icons/bs";
-
+import { Tooltip } from '@mui/material';
+import style from '../../../pages/Home/Home.module.css'
 
 function Links() {
     const [link, setLink] = useState("");
@@ -15,11 +16,13 @@ function Links() {
       }
   return (
     <div>
-       <button onClick={() => handleOpen("link")}>
+      <Tooltip title='Insert link'>
+      <button onClick={() => handleOpen("link")} style={{border:'transparent'}} className={style.undoContainer}>
             <label htmlFor="link">
-              <BsLink />
+              <BsLink style={{fontSize:'1.3rem'}} />
             </label>
           </button>
+           </Tooltip>
 
           {show ? (
             <div>
@@ -35,6 +38,8 @@ function Links() {
           ) : (
             ""
           )}
+     
+       
 
     </div>
   )

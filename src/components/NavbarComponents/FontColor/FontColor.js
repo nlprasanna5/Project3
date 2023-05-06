@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
-import { ImFontSize, ImTextColor } from "react-icons/im";
+import {  ImTextColor } from "react-icons/im";
+import { Tooltip } from '@mui/material';
+import style from '../FontStyle/FontStyle.module.css';
+
 function FontColor() {
     const [color, setColor] = useState("#000000");
     const handleFontColor = (e) => {
@@ -9,18 +12,20 @@ function FontColor() {
       };
   return (
     <div>
-       <button>
+      <Tooltip title='Font color'>
+      <button style={{border:'transparent'}} className={style.fontStyle}>
             <label htmlFor="color">
               <ImTextColor style={{ color: color }} />
             </label>
             <input
-              // className={style.input}
               id="color"
               type="color"
               value={color}
               onChange={handleFontColor}
             />
           </button>
+      </Tooltip>
+      
     </div>
   )
 }

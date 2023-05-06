@@ -4,11 +4,7 @@ import RedoIcon from '@mui/icons-material/Redo';
 import FormatBoldOutlinedIcon from '@mui/icons-material/FormatBoldOutlined';
 import FormatItalicOutlinedIcon from '@mui/icons-material/FormatItalicOutlined';
 import FormatUnderlinedOutlinedIcon from '@mui/icons-material/FormatUnderlinedOutlined';
-import ImagesearchRollerOutlinedIcon from '@mui/icons-material/ImagesearchRollerOutlined';
-import FormatColorTextOutlinedIcon from '@mui/icons-material/FormatColorTextOutlined';
-import BrushOutlinedIcon from '@mui/icons-material/BrushOutlined';
 import FormatIndentIncreaseIcon from '@mui/icons-material/FormatIndentIncrease';
-import LinkOutlinedIcon from '@mui/icons-material/LinkOutlined';
 import FormatAlignCenterOutlinedIcon from '@mui/icons-material/FormatAlignCenterOutlined';
 import FormatAlignLeftOutlinedIcon from '@mui/icons-material/FormatAlignLeftOutlined';
 import FormatAlignJustifyOutlinedIcon from '@mui/icons-material/FormatAlignJustifyOutlined';
@@ -16,15 +12,8 @@ import FormatAlignRightOutlinedIcon from '@mui/icons-material/FormatAlignRightOu
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import FormatClearIcon from '@mui/icons-material/FormatClear';
 import FormatIndentDecreaseIcon from '@mui/icons-material/FormatIndentDecrease';
-import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
 import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
-import SpellcheckOutlinedIcon from '@mui/icons-material/SpellcheckOutlined';
-import FormatLineSpacingIcon from '@mui/icons-material/FormatLineSpacing';
-import PrintOutlinedIcon from '@mui/icons-material/PrintOutlined';
 
-import ScreenWidth from "../../components/NavbarComponents/ScreenWidth/ScreenWidth";
-import FontStyle from "../../components/NavbarComponents/FontStyle/FontStyle";
-import FontSize from "../../components/NavbarComponents/FontSize/FontSize";
 
 
 export const Icons = [
