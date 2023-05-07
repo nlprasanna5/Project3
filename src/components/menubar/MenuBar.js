@@ -28,7 +28,7 @@ import ShareDialogBox from './shareDialogBox/ShareDialogBox';
 const MenuBar = () => {
     const [docName, setDocName] = useState("Untitled Document")
     const [starred, setStarred] = useState(false)
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
 
     const handleClickOpen = () => {
       setOpen(true);
@@ -89,7 +89,7 @@ const MenuBar = () => {
                 <Dialog open={open} onClose={handleClose} >
                     <DialogContent sx={{width:"32rem", height:"25rem", borderRadius:"2rem"}}>
                         <DialogContentText sx={{color:'black'}}>
-                            <ShareDialogBox docName={docName}/>
+                            <ShareDialogBox docName={docName} onClose={handleClose}/>
                         </DialogContentText>
                     </DialogContent>
                 </Dialog>
