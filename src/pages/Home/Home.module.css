@@ -132,7 +132,7 @@
 }
 @media only screen and (max-width:320px) and (max-width:375px){
     .box {
-        width:69vw;
+        width:60vw;
         margin:0.5rem;
         padding:2rem;
     }
@@ -150,13 +150,14 @@
 
 @media only screen and (max-width:768px){
     .box {
-        width:75vw;
+        /* width:75vw; */
+        width:62vw;
         margin:0.5rem;
         padding:2rem;
 
     }
     .downloaddoc {
-        width: 50px;
+        width: 43px;
         height: 50px;
       }
       .downloaddoc i {
