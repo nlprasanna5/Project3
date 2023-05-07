@@ -10,7 +10,7 @@ import FontColor from "../FontColor/FontColor";
 import HeightColor from "../heighlightColor/HeightColor";
 import HandleScale from "../handleScale/HandleScale";
 import SelectImage from "../selectImage/SelectImage";
-import Links from "../link/Links";
+
 import Printer from "../printer/Printer";
 import Heading from "../heading/Heading";
 
@@ -35,7 +35,6 @@ function Navbar({ printDiv }) {
                 <div
                   onClick={() => handleIcons(icon)}
                   className={home.undoContainer}
-                  title="undo"
                 >
                   {icon.icon}
                 </div>
