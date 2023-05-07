@@ -7,7 +7,7 @@ import FontStyle from "../FontStyle/FontStyle";
 import FontSize from "../FontSize/FontSize";
 
 import FontColor from "../FontColor/FontColor";
-import HeightColor from "../heighlightColor/HeightColor";
+import HighlightColor from "../highlightColor/HighlightColor";
 import HandleScale from "../handleScale/HandleScale";
 import SelectImage from "../selectImage/SelectImage";
 
@@ -63,7 +63,7 @@ function Navbar({ printDiv }) {
           ))}
 
           <FontColor />
-          <HeightColor />
+          <HighlightColor />
          
           <SelectImage />
 

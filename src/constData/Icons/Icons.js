@@ -13,38 +13,41 @@ import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import FormatClearIcon from '@mui/icons-material/FormatClear';
 import FormatIndentDecreaseIcon from '@mui/icons-material/FormatIndentDecrease';
 import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
+import StrikethroughSIcon from '@mui/icons-material/StrikethroughS';
+import SubscriptIcon from '@mui/icons-material/Subscript';
+import SuperscriptIcon from '@mui/icons-material/Superscript';
 
 
 
 export const Icons = [
     {
         icon: <UndoIcon />,
-        text: 'undo',
+        text: 'Undo',
         action: "undo",
     },
     {
         icon: <RedoIcon />,
-        text: 'redo',
+        text: 'Redo',
         action: "redo",
     },
     {
         icon: <FormatBoldOutlinedIcon />,
-        text: 'bold',
+        text: 'Bold',
         action: "bold",
     },
     {
         icon: <FormatItalicOutlinedIcon />,
-        text: 'italic',
+        text: 'Italic',
         action: "italic",
     },
     {
         icon: <FormatUnderlinedOutlinedIcon />,
-        text: 'underline',
+        text: 'Underline',
         action: "underline",
     },
     {
         icon: <FormatAlignLeftOutlinedIcon />,
-        text: 'align left',
+        text: 'Align left',
         action: "justifyLeft",
     },
     {
@@ -54,40 +57,54 @@ export const Icons = [
     },
     {
         icon: <FormatAlignRightOutlinedIcon />,
-        text: 'align right',
+        text: 'Align right',
         action: "justifyRight",
     },
     {
         icon: <FormatAlignJustifyOutlinedIcon />,
-        text: 'justify',
+        text: 'Justify',
         action: "justifyFull",
     },
-    
+
     {
         icon: <FormatListBulletedIcon />,
-        text: 'bulleted list',
+        text: 'Bulleted list',
         action: "insertUnorderedList",
     },
     {
         icon: <FormatListNumberedIcon />,
-        text: 'numbered list',
-       
+        text: 'Numbered list',
+
         action: "insertOrderedList",
     },
     {
         icon: <FormatIndentDecreaseIcon />,
-        text: 'decrease indent',
+        text: 'Decrease indent',
         action: "outdent",
     },
     {
         icon: <FormatIndentIncreaseIcon />,
-        text: 'increase indent',
+        text: 'Increase indent',
         action: "indent",
     },
-    
+    {
+        icon: <StrikethroughSIcon />,
+        text: 'Strike through',
+        action: "strikeThrough",
+    },
+    {
+        icon: <SubscriptIcon />,
+        text: 'Subscript',
+        action: 'subscript',
+    },
+    {
+        icon: <SuperscriptIcon />,
+        text: 'Superscript',
+        action: 'superscript'
+    },
     {
         icon: <FormatClearIcon />,
-        text: 'clear format',
+        text: 'Clear format',
         action: "removeFormat",
     },
 
@@ -95,34 +112,34 @@ export const Icons = [
 ]
 
 export const scaleList = [
-   "100%", "150%" , "200%" ,"75%", "50%" , "25%"
-  ]
+    "100%", "150%", "200%", "75%", "50%", "25%"
+]
 
-  
+
 export const headingList = [
     {
-      icon : "Heading 1",
-      value : "H1",
-    } ,
+        icon: "Heading 1",
+        value: "H1",
+    },
     {
-      icon : "Heading 2",
-      value : "H2",
-    } ,
+        icon: "Heading 2",
+        value: "H2",
+    },
     {
-      icon : "Heading 3",
-      value : "H3",
-    } ,
+        icon: "Heading 3",
+        value: "H3",
+    },
     {
-      icon : "Heading 4",
-      value : "H4",
-    } ,
+        icon: "Heading 4",
+        value: "H4",
+    },
     {
-      icon : "Heading 5",
-      value : "H5",
-    } ,
+        icon: "Heading 5",
+        value: "H5",
+    },
     {
-      icon : "Heading 6",
-      value : "H6",
-    } 
-    
-  ];
+        icon: "Heading 6",
+        value: "H6",
+    }
+
+];
