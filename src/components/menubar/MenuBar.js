@@ -11,7 +11,9 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
 import VideocamOutlinedIcon from '@mui/icons-material/VideocamOutlined';
-import BasicMenu from './Menu'
+import BasicMenu from './Menu';
+import { useRecoilState } from "recoil";
+import { documentName } from "./Atom";
 import {
     fileMenuItems,
     helpMenuItems,
@@ -23,7 +25,8 @@ import {
 } from '../../menuItems'
 
 const MenuBar = () => {
-    const [docName, setDocName] = useState("Untitled Document")
+    // const [docName, setDocName] = useState("Untitled Document")
+    const [docName,setDocName]=useRecoilState(documentName)
     const [starred, setStarred] = useState(false)
 
     return (
