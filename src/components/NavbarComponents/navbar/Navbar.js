@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import home from "../../../pages/Home/Home.module.css";
 import { Icons } from "../../../constData/Icons/Icons";
 import { Tooltip } from "@mui/material";
@@ -13,12 +13,28 @@ import SelectImage from "../selectImage/SelectImage";
 
 import Printer from "../printer/Printer";
 import Heading from "../heading/Heading";
-
 function Navbar({ printDiv }) {
-  function handleIcons(icon) {
+  const [click, setClick]=useState(false)
+  const [activeIcon, setActiveIcon]= useState(null)
+  function handleIcons(icon, index) {
+    if(index>1){
+      setClick(!click)
+      setActiveIcon(index)
+    }
+    
     document.execCommand(`${icon.action}`);
   }
+  const icons = document.querySelectorAll('.icon');
 
+  icons.forEach(icon => {
+    icon.addEventListener('click', () => {
+      icons.forEach(otherIcon => {
+        otherIcon.classList.remove('active');
+      });
+      icon.classList.add('active');
+    });
+  });
+  
   return (
     <>
       <div className={home.mainNav}>
@@ -33,10 +49,14 @@ function Navbar({ printDiv }) {
             <>
               <Tooltip title={icon.text} key={index}>
                 <div
-                  onClick={() => handleIcons(icon)}
-                  className={home.undoContainer}
+
+                  onClick={() => handleIcons(icon, index)}
+                  className={`${home.undoContainer} ${click? (activeIcon===index ? home.active : null): null}`}
+                  title="undo"
+
                 >
-                  {icon.icon}
+                   {icon.icon}
+                 
                 </div>
               </Tooltip>
             </>

@@ -3,7 +3,9 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import style from "./menuBar.module.css"
 
-export default function BasicMenu({ menuItems, label, className }) {
+
+ const BasicMenu= React.forwardRef(({ menuItems, label, className,onClick} ,ref )=> {
+
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
 
@@ -12,8 +14,45 @@ export default function BasicMenu({ menuItems, label, className }) {
     };
     const handleClose = () => {
         setAnchorEl(null);
-    };
+    }
 
+    function handleClickFunction(text){
+        
+        if(text==="New"){
+            window.open(window.location.href, '_blank');
+        }
+        else if( text==="Open"){
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.addEventListener('change', () => {
+            const selectedFile = fileInput.files[0];
+            console.log(selectedFile);
+            });
+            fileInput.click();
+        }
+        else if(text==="Rename"){
+            onClick();
+        }
+        else if(text==="Undo"){
+            document.execCommand("undo", false, null)
+        }
+        else if(text==="Redo"){
+            document.execCommand("redo", false, null)
+        }
+        else if(text==="Cut"){
+            document.execCommand("cut", false, null)
+        }
+        else if(text==="Copy"){
+            document.execCommand("copy", false, null)
+        }
+        else if(text==="Paste"){
+            document.execCommand("paste", false, null)
+        }
+        else if(text==="Text"){
+            document.execCommand("bold", false, null)
+        }
+    
+    }
     return (
         <div className={className}>
             <p className={style.menuBarContentBottomP}
@@ -34,9 +73,15 @@ export default function BasicMenu({ menuItems, label, className }) {
                     'aria-labelledby': 'basic-button',
                 }}
             >
-                {menuItems && menuItems.map((item) =>
+
+
+                {menuItems && menuItems.map((item, index) =>
                     <MenuItem sx={{ width: "18rem" }} onClick={handleClose}>
-                        <div style={{ display: "flex", alignItems: "center", gap: "1rem", justifyContent: "spaceAround" }}>
+                        <div ref={ref} 
+                            onClick={()=>handleClickFunction(item.text)}
+                            key={index} 
+                            style={{ display: "flex", alignItems: "center", gap: "1rem", justifyContent: "spaceAround" }}>
+
                             {item.icon}
                             {item.text}
                         </div>
@@ -45,4 +90,6 @@ export default function BasicMenu({ menuItems, label, className }) {
             </Menu>
         </div>
     );
-}
+})
+
+export default BasicMenu

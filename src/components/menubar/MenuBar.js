@@ -21,10 +21,22 @@ import {
     formatMenuItems,
     extensionMenuItems
 } from '../../menuItems'
+import { Dialog, DialogContent, DialogContentText } from '@mui/material';
+import ShareDialogBox from './shareDialogBox/ShareDialogBox';
+
 
 const MenuBar = () => {
     const [docName, setDocName] = useState("Untitled Document")
     const [starred, setStarred] = useState(false)
+    const [open, setOpen] = useState(false);
+
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = (value) => {
+      setOpen(false);
+    };
 
     return (
         <div className={style.menuBarContainer}>
@@ -70,10 +82,17 @@ const MenuBar = () => {
                     <p><VideocamOutlinedIcon sx={{ fontSize: "2.2rem" }} /></p>
                 </Tooltip>
 
-                <button>
+                <button onClick={handleClickOpen}>
                     <span className={style.shareBtn}> <LockOutlinedIcon sx={{ fontSize: "1.5rem" }} />Share</span>
                     <span className={style.shareIcon}><PersonAddAltOutlinedIcon /></span>
                 </button>
+                <Dialog open={open} onClose={handleClose} >
+                    <DialogContent sx={{width:"32rem", height:"25rem", borderRadius:"2rem"}}>
+                        <DialogContentText sx={{color:'black'}}>
+                            <ShareDialogBox docName={docName} onClose={handleClose}/>
+                        </DialogContentText>
+                    </DialogContent>
+                </Dialog>
                 <p><AccountCircleOutlinedIcon sx={{ fontSize: "2.5rem" }} /></p>
             </div>
         </div>
