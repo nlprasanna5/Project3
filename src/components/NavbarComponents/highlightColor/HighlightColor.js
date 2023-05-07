@@ -3,7 +3,7 @@ import { AiOutlineHighlight } from "react-icons/ai";
 import { Tooltip } from '@mui/material';
 import style from '../FontStyle/FontStyle.module.css';
 
-function HeightColor() {
+function HighlightColor() {
     const [higlightColor, setHeighlightColor] = useState("#000000");
   const handleHighlightColor = (e) => {
     setHeighlightColor(e.target.value);
@@ -33,4 +33,4 @@ function HeightColor() {
   )
 }
 
-export default HeightColor
+export default HighlightColor;
