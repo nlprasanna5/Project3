@@ -10,7 +10,7 @@ import FontColor from "../FontColor/FontColor";
 import HeightColor from "../heighlightColor/HeightColor";
 import HandleScale from "../handleScale/HandleScale";
 import SelectImage from "../selectImage/SelectImage";
-import Links from "../link/Links";
+
 import Printer from "../printer/Printer";
 import Heading from "../heading/Heading";
 function Navbar({ printDiv }) {
@@ -49,9 +49,11 @@ function Navbar({ printDiv }) {
             <>
               <Tooltip title={icon.text} key={index}>
                 <div
+
                   onClick={() => handleIcons(icon, index)}
                   className={`${home.undoContainer} ${click? (activeIcon===index ? home.active : null): null}`}
                   title="undo"
+
                 >
                    {icon.icon}
                  
