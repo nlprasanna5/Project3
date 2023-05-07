@@ -7,7 +7,7 @@ import { HiDownload } from "react-icons/hi";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import { useRecoilValue } from "recoil";
-import { documentName } from "../../components/menubar/Atom";
+import { documentName } from "../../recoil/Atom";
 import { Tooltip } from "@mui/material";
 
 function Home() {
@@ -26,7 +26,6 @@ function Home() {
       format: "a4",
       compress: false,
     });
-    const scaleFactor = 1.0;
     const imgWidth = 210;
     const imgHeight = (height * imgWidth) / width;
     pdfDoc.addImage(imageData, "PNG", 0, 0, imgWidth, imgHeight, "", "FAST");

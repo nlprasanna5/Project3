@@ -13,7 +13,7 @@ import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
 import VideocamOutlinedIcon from '@mui/icons-material/VideocamOutlined';
 import BasicMenu from './Menu';
 import { useRecoilState } from "recoil";
-import { documentName } from "./Atom";
+import { documentName } from '../../recoil/Atom';
 import {
     fileMenuItems,
     helpMenuItems,
